@@ -1,5 +1,18 @@
 import { useState } from 'react'
 import './App.css'
+
+import { Auth } from './components/auth'
+import { db, auth, storage } from "./config/firebase";
+import {
+  getDocs,
+  collection,
+  addDoc,
+  deleteDoc,
+  updateDoc,
+  doc,
+} from "firebase/firestore";
+import { ref, uploadBytes } from "firebase/storage";
+
 import { Link, Route, Routes } from 'react-router-dom'
 import Layout from './Layout'
 import HomePage from './pages/HomePage'
@@ -9,21 +22,25 @@ import Blog from './pages/Blog'
 import Team from './pages/Team'
 import Mentorship from './pages/Mentorship'
 import ScholarshipDatabase from './pages/ScholarshipDatabase'
+import About from './pages/About';
+
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
+
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
-          <Route index="/login" element={<LoginPage />} />
-          <Route index="/register" element={<RegistrationPage />} />
-          <Route index="/blog" element={<Blog />} />
-          <Route index="/team" element={<Team />}/>
-          <Route index="/mentorship" element={<Mentorship />} />
-          <Route index="/database" element={<ScholarshipDatabase />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/register" element={<RegistrationPage />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/team" element={<Team />}/>
+          <Route path="/mentorship" element={<Mentorship />} />
+          <Route path="/database" element={<ScholarshipDatabase />} />
+          <Route path="/about" element={<About />} />
         </Route>
       </Routes>
     </>

@@ -1,28 +1,38 @@
-import { Auth } from "../../components/auth";
+import react from "react";
+import { Link, Route, Routes } from "react-router-dom";
+import { Auth } from "../components/auth";
+import Awards from "./HomePageFeatures/Awards";
+import FeaturedArticles from "./HomePageFeatures/FeaturedArticles";
+import Media from "./HomePageFeatures/Media";
+import YourGoals from "./HomePageFeatures/YourGoals";
 
 export default function HomePage(){
     return(
         <>
-        <main>
+        {/* CSS Animation + Authentication */}
         <div class="box">
+            <Auth />
         </div>
 
+        {/* Self Check-Out Options + Book An Appointment */}
         <div class="box2">
-            here to support your goals
+            <YourGoals />
         </div>
 
+        {/* Featured Articles in Print and Online Media */}
         <div class="box3">
-            featured articles
+            <FeaturedArticles />
         </div>
 
+        {/* Podcast & Blog Posts */}
         <div class="box4">
-            featured media
+            <Media />
         </div>
 
+        {/* Awards */}
         <div class="box5">
-            awards
+            <Awards />
         </div>
-        </main>
         </>
     )
 }

@@ -3,6 +3,7 @@
   box-sizing: border-box;
   background-color: #eee;
   margin:0 auto;
+  color:#294243;
 }
 
 /* Misc. Formatting */
@@ -114,6 +115,10 @@ div.box5{
   color:#eee;
   padding:20px;
   height:400px;
+}
+
+div.registration{
+  color:black;
 }
 
 /* Buttons */
