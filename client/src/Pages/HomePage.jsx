@@ -1,8 +1,10 @@
+import { Auth } from "../../components/auth";
+
 export default function HomePage(){
     return(
         <>
+        <main>
         <div class="box">
-            hero page
         </div>
 
         <div class="box2">
@@ -20,6 +22,7 @@ export default function HomePage(){
         <div class="box5">
             awards
         </div>
+        </main>
         </>
     )
 }

@@ -2,6 +2,7 @@
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   box-sizing: border-box;
   background-color: #eee;
+  margin:0 auto;
 }
 
 /* Misc. Formatting */
@@ -70,6 +71,10 @@ ul{
 /* Navigation Bar */
 
 /* Landing Page */
+
+main{
+  width: 100%;
+}
 
 div.box{
   position:relative;
