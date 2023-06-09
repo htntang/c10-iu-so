@@ -3,6 +3,7 @@ import { Link, Route, Routes } from "react-router-dom";
 import { Auth } from "../components/auth";
 import Awards from "./HomePageFeatures/Awards";
 import FeaturedArticles from "./HomePageFeatures/FeaturedArticles";
+import HeroImage from "./HomePageFeatures/HeroImage";
 import Media from "./HomePageFeatures/Media";
 import YourGoals from "./HomePageFeatures/YourGoals";
 
@@ -11,7 +12,14 @@ export default function HomePage(){
         <>
         {/* CSS Animation + Authentication */}
         <div class="box">
-            <Auth />
+            <div class="row">
+                <div class="column">
+                    image
+                </div>
+                <div class="column">
+                    <Auth />
+                </div>
+            </div>
         </div>
 
         {/* Self Check-Out Options + Book An Appointment */}

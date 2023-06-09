@@ -37,24 +37,26 @@ await signOut(auth);
 
     return (
         <div className="registration">
+            <h3>Register Now</h3>
+            <h6><i>Quick Sign-Up</i></h6>
             <input
                 placeholder="Email"
                 onChange={(e) => setEmail(e.target.value)} 
                 />
+            <br />
             <input 
                 placeholder="Password"
                 type="password"
                 onChange={(e) => setPassword(e.target.value)}
                 />
             <br />
+            <div className="authentication-buttons">
+            <button class="authentication"  onClick={signIn}>Sign In</button>
             <br />
-            <button onClick={signIn}>Sign In</button>
+            <button class="authentication"  onClick={signInWithGoogle}>Sign in With Google</button>
             <br />
-            <br />
-            <button onClick={signInWithGoogle}>Sign in With Google</button>
-            <br />
-            <br />
-            <button onClick={logout}>Logout</button>
+            <button class="authentication" onClick={logout}>Logout</button>
+            </div>
         </div>
     )
 }
