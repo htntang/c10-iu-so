@@ -35,28 +35,67 @@ await signOut(auth);
     }
 };
 
-    return (
-        <div className="registration">
-            <h3>Register Now</h3>
-            <h6><i>Quick Sign-Up</i></h6>
-            <input
-                placeholder="Email"
-                onChange={(e) => setEmail(e.target.value)} 
-                />
-            <br />
-            <input 
-                placeholder="Password"
-                type="password"
-                onChange={(e) => setPassword(e.target.value)}
-                />
-            <br />
-            <div className="authentication-buttons">
-            <button class="authentication"  onClick={signIn}>Sign In</button>
-            <br />
-            <button class="authentication"  onClick={signInWithGoogle}>Sign in With Google</button>
-            <br />
-            <button class="authentication" onClick={logout}>Logout</button>
-            </div>
-        </div>
-    )
-}
+return(
+/* Template from https://codepen.io/Mohuth/pen/QWgrPvp */
+
+<div class="container">
+	<div class="screen">
+		<div class="screen__content">
+			<form class="login">
+                {/* Login Field: Email */}
+				<div class="login__field">
+					<i class="login__icon fas fa-user"></i>
+					<input type="text"
+                    class="login__input"
+                    placeholder="Email" 
+                    onChange={(e) => setEmail(e.target.value)}
+                    />
+				</div>
+
+                {/* Login Field: Password */}
+				<div class="login__field">
+					<i class="login__icon fas fa-lock"></i>
+					<input type="password"
+                    class="login__input"
+                    placeholder="Password" 
+                    onChange={(e) => setPassword(e.target.value)}
+                    />
+				</div>
+                <br />
+
+            {/* Buttons - Native Login */}
+
+				<button class="button login__submit">
+					<span class="button__text">Sign-In</span>
+					<i class="button__icon fas fa-chevron-right"></i>
+				</button>				
+			</form>
+
+            {/* Buttons - Social Login */}
+
+			<div class="social-login">
+				<h3>log in via</h3>
+				<div class="social-icons">
+					<button 
+                        class="social-login__icon fab fa-instagram"
+                         />
+					<button
+                        class="social-login__icon fab fa-facebook"
+                        onClick={signInWithGoogle} 
+                        />
+					<button
+                        class="social-login__icon fab fa-twitter" 
+                        />
+				</div>
+			</div>
+		</div>
+		<div class="screen__background">
+			<span class="screen__background__shape screen__background__shape4"></span>
+			<span class="screen__background__shape screen__background__shape3"></span>		
+			<span class="screen__background__shape screen__background__shape2"></span>
+			<span class="screen__background__shape screen__background__shape1"></span>
+		</div>		
+	</div>
+</div>
+        )
+    }
