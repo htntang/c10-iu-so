@@ -1,15 +1,12 @@
-import react from "react";
-import { Link, Route, Routes } from "react-router-dom";
 import { Auth } from "../components/auth";
 import Awards from "./HomePageFeatures/Awards";
 import FeaturedArticles from "./HomePageFeatures/FeaturedArticles";
-import HeroImage from "./HomePageFeatures/HeroImage";
 import Media from "./HomePageFeatures/Media";
 import YourGoals from "./HomePageFeatures/YourGoals";
 
 export default function HomePage(){
     return(
-        <>
+        <main>
         {/* CSS Animation + Authentication */}
         <div class="box">
             <div class="row">
@@ -41,6 +38,7 @@ export default function HomePage(){
         <div class="box5">
             <Awards />
         </div>
-        </>
+        </main>
+
     )
 }

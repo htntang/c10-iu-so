@@ -45,7 +45,7 @@ return(
                 {/* Login Field: Email */}
 				<div class="login__field">
 					<i class="login__icon fas fa-user"></i>
-					<input type="text"
+					<input
                     class="login__input"
                     placeholder="Email" 
                     onChange={(e) => setEmail(e.target.value)}
@@ -55,9 +55,10 @@ return(
                 {/* Login Field: Password */}
 				<div class="login__field">
 					<i class="login__icon fas fa-lock"></i>
-					<input type="password"
+					<input
                     class="login__input"
                     placeholder="Password" 
+                    type="password"
                     onChange={(e) => setPassword(e.target.value)}
                     />
 				</div>
@@ -65,7 +66,7 @@ return(
 
             {/* Buttons - Native Login */}
 
-				<button class="button login__submit">
+				<button class="button login__submit" onClick={signIn}>
 					<span class="button__text">Sign-In</span>
 					<i class="button__icon fas fa-chevron-right"></i>
 				</button>				
@@ -75,17 +76,12 @@ return(
 
 			<div class="social-login">
 				<h3>log in via</h3>
-				<div class="social-icons">
-					<button 
-                        class="social-login__icon fab fa-instagram"
-                         />
+				<div class="social-media">
 					<button
-                        class="social-login__icon fab fa-facebook"
+                        class="social-icons"
                         onClick={signInWithGoogle} 
-                        />
-					<button
-                        class="social-login__icon fab fa-twitter" 
-                        />
+                        >Google
+                        </button>
 				</div>
 			</div>
 		</div>
