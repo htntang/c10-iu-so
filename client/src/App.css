@@ -22,7 +22,7 @@ header a{
 }
 
 header a img{
-  max-width:20%;
+  max-width:12%;
 }
 
 footer{
@@ -66,6 +66,57 @@ h3{
 
 /* Navigation Bar */
 
+.navigation {
+	height: 60px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	position: relative;
+	padding: 0.5rem 0rem;
+	background-color: #fff;
+	color: black;
+	box-shadow: 0 2px 2px 2px rgba(9, 9, 9, 0.23);
+}
+
+.navigation-menu {
+	margin-left: auto;
+}
+
+.navigation-menu ul{
+	display:flex;
+	padding:0;
+}
+
+.navigation-menu li{
+	list-style-type:none;
+	margin: 0 1rem;
+}
+
+.navigation-menu li a{
+	color:#294243;
+	text-decoration: none;
+	display:block;
+	width:100%;
+}
+
+.hamburger{
+	border:0;
+	height:40px;
+	width:40px;
+	padding:0.5rem;
+	border-radius:50%;
+	background-color:#eee;
+	transition: background-color 0.2s ease-in-out;
+	position:absolute;
+	right:25px;
+	transform:translateY(-50%);
+	display:none;
+}
+
+.hamburger:hover{
+	background-color:2642af;
+}
+
 /* Pages */
 
 div.homepage{
@@ -86,6 +137,15 @@ div.box{
   background-color:#8BBE96;
   color:#eee;
   display:flex;
+}
+
+h1.box1{
+	text-align: left;
+}
+
+h3.box1{
+	text-align:left;
+	color:#eee;
 }
 
 div.box2{
@@ -280,6 +340,11 @@ input {
 	transition: .2s;
 }
 
+.button__text{
+	color: #294243;
+	text-align: center;
+}
+
 .login__submit:active,
 .login__submit:focus,
 .login__submit:hover {
@@ -371,7 +436,7 @@ input {
 }
 
 .headshotImg-Dolapo{
-	background-image:url();
+	background-image:url(https://i.imgur.com/3xDPQCh.png);
 	background-color:#658d6e;
 }
 
@@ -396,7 +461,7 @@ input {
 }
 
 .headshotImg-Han{
-	background-image:url(https://i.imgur.com/Ux73qnJ.png);
+	background-image:url(https://i.imgur.com/uf7tmnl.png);
 	background-color:#658d6e;
 }
 

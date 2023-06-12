@@ -67,7 +67,7 @@ return(
             {/* Buttons - Native Login */}
 
 				<button class="button login__submit" onClick={signIn}>
-					<span class="button__text">Sign-In</span>
+					<span class="button__text">Login</span>
 					<i class="button__icon fas fa-chevron-right"></i>
 				</button>				
 			</form>
